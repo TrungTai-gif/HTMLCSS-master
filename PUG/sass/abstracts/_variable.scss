@@ -1,0 +1,11 @@
+:root {
+    --columns: 3;
+    --gap: 30px;
+    --spacing: calc(((var(--columns) - 1) * var(--gap)) / var(--columns));
+    --main-color: #3b71fe;
+    --gray2: #353945;
+    --gray3:#777E90;
+    --gray4:#B1B5C3;
+    --gray5:#E6E8EC;
+    --gray7:#F4F5F9;
+}

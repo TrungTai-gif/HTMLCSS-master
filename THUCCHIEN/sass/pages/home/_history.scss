@@ -1,0 +1,51 @@
+@use '../../abstracts' as abs;
+.history{
+    @include abs.flc(20px,40px);
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    &-item{
+        display: flex;
+        gap: 11px;
+        align-items: center;
+    }
+    &-img{
+        width: 109px;
+        height: 67px;
+        object-fit: cover;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+    &-right{
+        @include abs.flc(3px);
+    }
+    &-play{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 13px;
+        color: abs.$gray-2;
+        img, .play{
+            width: 16px;
+            aspect-ratio: 1;
+            [fill^="#A5"]{
+                fill: currentColor;
+            }
+        }
+    }
+    &-view{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    &-perspective{
+        font-size: 13px;
+        color: abs.$gray-2;
+    }
+    &-caption{
+        font-size: 15px;
+        font-weight: 500;
+    }
+}

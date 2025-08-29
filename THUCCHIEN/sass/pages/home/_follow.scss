@@ -1,0 +1,41 @@
+@use '../../abstracts' as abs;
+.follow{
+    @include abs.flc(20px,40px);
+    &-list{
+        @include abs.flc(20px)
+    }
+    &-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-left{
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        img{
+            width: 46px;
+            aspect-ratio: 1;
+            flex-shrink: 0;
+            border-radius: 6px;
+            background: abs.$Support-color;
+            box-shadow: 0 0 0 1px white, 0 0 0 2px abs.$secondary3;
+        }
+    }
+    &-infor{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &-name{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    &-id{
+        font-size: 13px;
+        color: abs.$gray-2;
+    }
+    &-right{
+        padding: 6px 18px;
+    }
+}

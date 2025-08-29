@@ -1,0 +1,79 @@
+@use '../../abstracts' as abs;
+
+.trending-banner{
+    width: 100%;
+    margin-bottom: 38px;
+}
+.trending-heading{
+    margin-bottom: 11px;
+}
+.banner {
+    background-color: var(--bg-trending);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    container-type: inline-size;
+    container-name:avt ;
+    &-text{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.title {
+    max-width: 276px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 11px;
+    &-first{
+        background: abs.$gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+.podcast{
+    font-size: 14px;
+    color: var(--natural-gray2);
+    margin-bottom: 4px;
+}
+.name{
+    font-size: 14px;
+    margin-bottom: 20px;
+    &-last{
+        color: var(--natural-gray2);
+    }
+}
+.play-now{
+    width: fit-content;
+    gap: 8px;
+    padding: 8px 14px;
+}
+.fream{
+    position: absolute;
+    left: 55.5%;
+    bottom: 0;
+}
+.vector{
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+.banner-img{
+    max-width: 332px;
+    max-height: 274px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    & .banner-avt{
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+}
+@container avt (max-width:600px){
+    .banner-avt {
+        display: none;
+    }
+}

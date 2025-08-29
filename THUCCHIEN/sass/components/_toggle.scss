@@ -1,0 +1,35 @@
+@use '../abstracts' as abs;
+.label-toggle{
+    input {
+        display: none;
+    }
+    .toggle {
+        width: 30px;
+        height: 17px;
+        padding: 2px;
+        border-radius: 30px;
+        background: abs.$icon-color;
+        position: relative;
+        flex-shrink: 0;
+        cursor: pointer;
+        &-spinner{
+            width: 14px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: abs.$Neutral-1;
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.2s linear;
+        }
+    }
+}
+#checked:checked{
+    & + .toggle {
+        background: abs.$gradient;
+        .toggle-spinner{
+            transform: translate(12px, -50%);
+        }
+    }
+}

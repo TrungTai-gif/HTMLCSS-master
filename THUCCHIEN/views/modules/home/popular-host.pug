@@ -1,0 +1,16 @@
+.host 
+    h2.host-heading.heading Popular Hosts
+    ul.host-list 
+        each user in[{name: "Thomas", color: "#FFBAA5"},{name: "Darrell", color: "#FFD381"},{name: "Arlene", color: "#B6AEE9"},{name: "Kristin", color: "#FFB5CD"},{name: "Courtney", color: "#FFE2AB"},{name: "Cody", color: "#FFC7D9"},{name: "Arlene", color: "#B6AEE9"}] 
+            li.host-item 
+                .host-avatar(style=`--color: ${user.color}`)
+                    img(src="../images/avatar.png", alt="avatar" draggable="false")
+                span.host-name=user.name
+    //- - var n = 0;
+    //- ul.host-list  
+    //-     while n < 7
+    //-         li.host-item
+    //-             .host-avatar(style=`--color: #FFBAA5`)
+    //-                 img(src="../images/avatar.png", alt="avatar")
+    //-             span.host-name Thomas
+    //-             - n++

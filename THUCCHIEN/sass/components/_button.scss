@@ -1,0 +1,21 @@
+@use '../abstracts' as abs;
+.button{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    color: abs.$Neutral-01;
+    background-color: abs.$Primary;
+    border-radius: 8px;
+}
+.button-followed{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    color: abs.$icon-color;
+    border: 2px solid abs.$icon-color;
+    border-radius: 8px;
+}

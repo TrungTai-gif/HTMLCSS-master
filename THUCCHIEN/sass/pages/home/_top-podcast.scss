@@ -1,0 +1,29 @@
+@use '../../abstracts' as abs;
+.Tpodcast{
+    container: top-podcast / inline-size;
+    @include abs.flc(20px,40px);
+    &-images{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        img{
+            object-position: center;
+            background: abs.$icon-color;
+            border-radius: 10px;
+            object-fit: cover;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+@container top-podcast (min-width: 660px){
+    .Tpodcast-images{
+        grid-template-columns: repeat(8,1fr);
+    }
+}
+@container top-podcast (min-width: 450px) and (max-width:659.98px){
+    .Tpodcast-images{
+        gap: 20px 40px;
+    }
+}

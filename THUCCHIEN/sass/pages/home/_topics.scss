@@ -1,0 +1,53 @@
+@use '../../abstracts' as abs;
+.topic{
+    @include abs.flc(20px, 30px);
+    container-type: inline-size;
+    container-name: topic ;
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 12px 22px;
+        grid-auto-rows: 86px;
+    }
+    &-item{
+        flex-shrink: 0;
+        box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 10px;
+        background: abs.$Support-color;
+        overflow: hidden;
+        position: relative;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &-text{
+        position: absolute;
+        left: 6.4%;
+        bottom: 11.6%;
+        color: abs.$color-white;
+        &-title{
+            font-weight: 500;
+            line-height: 1.42;
+            font-size: 14px;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+    &-coating{
+        position: absolute;
+        inset: 0;
+        opacity: 0.7;
+        background: abs.$text-black1;
+    }
+}
+
+@container topic (max-width: 310px){
+    .topic-item:nth-child(n+3){
+        display: none;
+    }
+    .topic-list{
+        grid-template-columns: 1fr;
+    }
+}

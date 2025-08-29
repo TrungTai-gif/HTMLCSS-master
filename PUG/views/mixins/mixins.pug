@@ -1,0 +1,28 @@
+mixin tourItem(image, price, tiltle, review, reviewCount, duration, tourPrice)
+    .tour
+        .tour-top
+            img.tour-image(src= image, alt='bali')
+            span.tour-price From $#{price}
+        .tour-content
+            h3.tour-title= tiltle
+            .tour-rating
+                .tour-review
+                    .tour-star
+                        img(src='./images/Shape.png', alt='Shape')
+                    .tour-review-count
+                        span #{review} (#{reviewCount} reviews)
+                span.tour-duration Duration: #{duration} hours
+            a.tour-button(href='#', target='_blank', rel='noopener noreferrer') Tours Price $#{tourPrice}
+
+mixin popularItem(image,tiltle)
+    .popular-item 
+        .popular-image 
+            .popular-overlay
+            img.popular-img(src=image alt="beYeu")
+            span.popular-label Must See 
+        .popular-content
+            span.populer-time Sep 28 10:00 AM - 1:00 PM
+            h3.popular-tiltle=tiltle
+            .popular-review
+                img.popular-star(src="./images/Shape.png" alt="star")
+                span.popular-review-count 4.8 (12 reviews)

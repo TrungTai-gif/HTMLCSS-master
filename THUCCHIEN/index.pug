@@ -1,0 +1,16 @@
+extends ./views/layout/dashboard 
+append stylesheet 
+    link(rel="stylesheet", href="./styles/home.css")
+block title 
+    title Home Page
+block main
+    .home-left 
+        include ./views/modules/home/popular-host
+        include ./views/modules/home/trending-banner
+        include ./views/modules/home/feed
+    .home-right 
+        include ./views/modules/home/top-podcast
+        include ./views/modules/home/follow
+        include ./views/modules/home/history
+        include ./views/modules/home/topics
+        include ./views/modules/home/playing

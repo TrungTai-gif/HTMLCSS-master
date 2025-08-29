@@ -1,0 +1,32 @@
+@use '../abstracts' as abs;
+.wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0,256px) minmax(0, 1fr);
+    min-height: 100vh;
+    container: tai / inline-size;
+    width: 100%;
+}
+
+.main-container{
+    width: 100%;
+    padding-inline: 56px 60px;
+    padding-top: 37px;
+    display: grid;
+    grid-template-columns: minmax(0,1.9fr) minmax(0,1.1fr);
+    grid-template-rows: auto;
+    gap: 60px;
+    flex: 1;
+}
+.home-right{
+    line-height: 1.46;
+}
+.home-left{
+    min-width: 0;
+}
+@container tai (max-width:910px){
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

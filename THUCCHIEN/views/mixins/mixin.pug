@@ -1,0 +1,125 @@
+mixin menuItem(item, icon , href="#")
+    li.menu-item
+        a.menu-link(href=href) 
+            span.menu-icon
+                if icon
+                    case icon
+                        when 'graph.svg'
+                            include ../icons/graph
+                        when 'chart.svg'
+                            include ../icons/chart
+                        when '3dcube.svg'
+                            include ../icons/3dcube
+                        when 'play.svg'
+                            include ../icons/play
+                        when 'subscriptions.svg'
+                            include ../icons/subscriptions
+                        when 'discovery.svg'
+                            include ../icons/discovery
+                        when 'microphone.svg'
+                            include ../icons/microphone
+                        when 'user.svg'
+                            include ../icons/user
+                        when 'add-user.svg'
+                            include ../icons/add-user
+                        when 'star.img'
+                            img(src="../../images/icons/star.svg")
+            span.menu-text=item
+
+mixin toggle
+    label.label-toggle(for="checked") 
+        input(type="checkbox" name=" " id="checked")
+        .toggle
+            .toggle-spinner
+
+mixin main-item(avt,name,status, star, id) 
+
+    .feed-item
+        .feed-header 
+            .profile-feed
+                img.profile-img(src=avt, alt="avatar")
+                img.verify(src="../images/icons/verify.svg", alt="verify")
+            .infor
+                .infor-top 
+                    span.infor-name=name
+                    | &nbsp
+                    span.status=status
+                    - var n = 0;
+                    if star
+                        .star
+                            while n < star
+                                img(src="../images/icons/magic-star.svg", alt="rated")
+                                - n++
+                .infor-bottom
+                    if id 
+                        span.id=id
+                        img(src="../images/icons/dot.svg", alt="dot")
+                    span.timee Jun 25th
+            img.more(src="../images/icons/more.svg", alt="more")
+        .feed-content 
+            .content-left 
+                img(src="../images/content-micro.png", alt="micro")
+            .content-right 
+                span.content-name Perspective Podcast (Ep. 1) 
+                span.content-title Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+                .content-time   
+                    .content-general
+                        img(src="../images/icons/clock.svg", alt="clock")
+                        p 11 dayes ago
+                    .content-general 
+                        img(src="../images/icons/timer.svg", alt="timer")
+                        p 45mins 10 Sec
+                p Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...
+                img.share(src="../images/icons/share.svg", alt="share")
+        .feed-footer
+            .footer-icon 
+                img(src="../images/icons/heart.svg", alt="heart")
+                img(src="../images/icons/footer-star.svg", alt="star")
+                img(src="../images/icons/magic-playlist.svg", alt="playlist")
+            button.footer-button.button 
+                img(src="../images/icons/play.svg", alt="play")
+                span Play Episode
+
+mixin home-right-title(title,view)
+    .home-right-title 
+        h2.home-right-heading.heading=title
+        .home-right-view  
+            if !view
+                p View All
+                img(src="../images/icons/cheveron.svg", alt="")
+
+mixin follow-item(img, name , id, fl)
+    .follow-item 
+        .follow-left 
+            img(src=img , alt="avatar")
+            .follow-infor 
+                span.follow-name=name
+                span.follow-id=id
+        if fl==true
+            button.follow-right.button Follow
+        else 
+            button.follow-right.button-followed Followed
+
+mixin history-item(name , cap)
+    .history-item
+        img.history-img(src="../images/content-micro.png", alt="img")
+        .history-right
+            span.history-perspective Perspective with #{name}
+            span.history-caption=cap
+            .history-play
+                .history-view 
+                    span.play 
+                        include ../icons/play.pug
+                    p 156
+                .history-view
+                    img(src="../images/icons/heart.svg", alt="heart")
+                    p 78
+
+mixin topic-item(img,text)
+    .topic-item 
+        .topic-coating
+        img(src=img, alt="img") 
+        .topic-text 
+            span.topic-text-title=text
+            p 761k podcast
+

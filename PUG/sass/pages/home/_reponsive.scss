@@ -1,0 +1,131 @@
+@media screen and (max-width: 767.98px) {
+/* Tour */
+
+  section {
+    margin-top: 20px;
+  }
+
+  .tour {
+    /* width: 100%; */
+    padding-bottom: 8.38px;
+  }
+
+  :root {
+    --columns: 1;
+    --gap: 20px;
+  }
+
+  .tour-title {
+    font-size: 16px;
+    margin-bottom: 8.84px;
+  }
+
+  .tour-button,
+  .tour-review-count,
+  .tour-duration {
+    font-size: 12px;
+  }
+
+  .tour-content {
+    padding: 17.68px 17.68px 0 17.68px;
+  }
+
+  .tour-price {
+    padding: 4.42px 14.14px;
+    top: 21.21px;
+    left: 26.54px;
+  }
+
+  .tour-rating {
+    margin-bottom: 17.68px;
+  }
+
+  .tour-image {
+    height: 211px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  /* tour */
+
+  section {
+    margin-top: 40px;
+  }
+
+  :root {
+    --columns: 2;
+    --gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  /* popular */
+  .popular-list {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+  }
+  .popular-item {
+    flex: 0 0 auto;
+    width: 270px;
+    margin-bottom: 20px;
+    scroll-snap-align: center;
+  }
+
+  .gem-button {
+    margin-block: 19px 30px;
+  }
+
+  .gem-button a {
+    padding: 4px 20px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  /* gem */
+  .gem-list {
+    // grid-template-columns: 1fr;
+    grid-auto-rows: 133px;
+    gap: 23px;
+  }
+  .gem .heading {
+    font-size: 18px;
+    margin-bottom: 19px;
+  }
+
+  .gem-tiltle h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .gem-tiltle span {
+    font-size: 10px;
+  }
+
+  /* footer */
+
+  .footer-desc,
+  .footer-input {
+    max-width: none;
+  }
+
+  .footer-columns,
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  // header
+  .header{
+    padding: 10px 0;
+    &-list a{
+      padding: 9.5px 10px;
+      font-size: 7px;
+    }
+    &-list img{
+      display: none ;
+    }
+  }
+}

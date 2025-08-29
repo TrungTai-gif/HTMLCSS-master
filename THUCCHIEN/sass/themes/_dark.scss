@@ -1,0 +1,32 @@
+:root{
+  --bg:white;
+  --text-sidebar: #8494AB;
+  --line-sidebar: #E9EEF4;
+  --heading-sidebar: #8494ab;
+  --search-header: #F0F3F6;
+  --heading-home:#1b1d21;
+  --inverse:#1b1d21;
+  --opacity-inverse: hsla(220, 10%, 12%,0.2);
+  --host-name:#5F6164;
+  --bg-trending:#FCFCFC;
+  --natural-gray2: #676A6F;
+  --natural2-bg3: #F0F3F6;
+  --gray1-bg3: #373A43;
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg:#242731;
+    --text-sidebar: #ABABAD;
+    --line-sidebar: #373A43;
+    --search-header: #373A43;
+    --heading-sidebar: #5F6164;
+    --heading-home:white ;
+    --inverse:white;
+    --opacity-inverse: hsla(0, 0%, 100%,0.2);
+    --host-name:#E4E4E4;
+    --bg-trending:#050F16;  
+    --natural-gray2: #A6A7B2;
+    --natural2-bg3: #373A43;
+    --gray1-bg3: #5F6164;
+  }
+}

@@ -1,0 +1,89 @@
+/* gem */
+.gem-list {
+    display: grid;
+    gap: 30px;
+    grid-auto-rows: 220px;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a1 a2"
+    "a3 a4";
+    @for $i from 1 through 4 {
+      grid-area: a + #{$i};
+    }
+  }
+  
+  .gem-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+  }
+  
+  .gem-item {
+    padding: 12px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 30px 110px 0 rgba(0, 0, 0, 0.08);
+  }
+  
+  .gem-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .gem .heading {
+    text-align: center;
+  }
+  
+  .gem .container {
+    max-width: 998px;
+  }
+  
+  .gem-item-background {
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    background: linear-gradient(
+      3deg,
+      rgba(0, 0, 0, 0.6) 17.99%,
+      rgba(0, 0, 0, 0) 55.56%
+    );
+    position: absolute;
+    inset: 0;
+  }
+  
+  .gem-tiltle h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 6px;
+  }
+  
+  .gem-tiltle span {
+    font-size: 14px;
+    line-height: 1.42;
+    color: white;
+  }
+  
+  .gem-tiltle {
+    position: absolute;
+    left: 4.3%;
+    bottom: 6.1%;
+  }
+  
+  .gem-button {
+    margin-block: 70px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gem-button a {
+    background-color: var(--main-color);
+    padding: 9px 40px;
+    border-radius: 30px;
+    color: white;
+    line-height: 1.5;
+  }
+  

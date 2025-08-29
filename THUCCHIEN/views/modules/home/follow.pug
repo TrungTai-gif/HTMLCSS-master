@@ -1,0 +1,7 @@
+.follow
+    +home-right-title("Suggested Follows")
+    .follow-list 
+        - var n=0;
+            while n < 5
+                +follow-item("../images/avatar.png", "Yahia Amin","@yahiamdamin", false)
+                - n++

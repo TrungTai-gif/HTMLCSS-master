@@ -1,0 +1,13 @@
+.feed 
+    .feed-top 
+        .feed-tab 
+            a.my-feed(href="#") My Feed
+            a.popular-feed(href="#") Poplar Feed
+            a.recent(href="#") Recent 
+        .feed-toggle
+            +toggle
+            span New Releases & Guests Only
+    .feed-main
+        +main-item("../images/profile.png", "James Killened", "rated an episude", 5)
+        +main-item("../images/avatar.png", "Thomas L. Fletcher", " relesed a new episode", "","@thomas231")
+        +main-item("../images/profile.png", "James Killened", "rated an episude", 5)

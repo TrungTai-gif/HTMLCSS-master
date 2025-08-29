@@ -1,0 +1,15 @@
+aside.sidebar 
+    a.logo(href="#") 
+        img(srcset="./images/Logo.png 2x" alt='Logo')
+    ul.menu
+        each item in[{ text: "home" , icon:"graph.svg" }, {text: "Trending" , icon:"chart.svg"}, {text: "Explore Topics" , icon:"3dcube.svg"}, {text: "Playlist" , icon:"play.svg"}, {text: "Subscriptions" , icon:"subscriptions.svg"}]
+            +menuItem(item.text , item.icon )
+    ul.menu
+        h3.menu-heading Podcasters
+        +menuItem("Dashboard", "discovery.svg")
+        +menuItem("Episodes", "microphone.svg")
+        +menuItem("Team","user.svg")
+        +menuItem("Subscribers", "add-user.svg")
+    ul.menu
+        h3.menu-heading Community
+        +menuItem("Leaderboard","star.img")

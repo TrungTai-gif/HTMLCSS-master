@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* độ rộng của 1 khối sẽ bao gồm padding và border; content-box: độ rộng của 1 khối = with + padding + border  */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ol, 
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+}

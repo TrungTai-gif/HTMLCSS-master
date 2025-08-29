@@ -1,0 +1,13 @@
+@import "abstracts/mixins.scss";
+@import "abstracts/variable.scss";
+
+@import "base/reset";
+@import "base/general";
+
+@import 'components/button';
+@import 'components/typography';
+
+@import "layout/header.scss";
+@import "layout/footer";
+
+@import "pages/home.scss";

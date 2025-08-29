@@ -1,0 +1,6 @@
+@use '../abstracts' as abs ;
+body {
+    background-color: var(--bg);
+    font-family: abs.$font-primary;
+    color: var(--inverse);
+}

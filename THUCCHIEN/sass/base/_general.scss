@@ -1,0 +1,23 @@
+@use '../abstracts' as abs;
+.profile-img {
+    border-radius: 50%;
+    object-position: top;
+    background-color: abs.$secondary;
+    object-fit: cover;
+}
+
+.home-right{
+    &-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-view{
+        display: flex;
+        gap: 2px;
+        color: abs.$gray-2;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.38;
+    }
+}
